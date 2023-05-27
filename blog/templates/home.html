@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block msg %}
+{% if messages %}
+{% for ms in messages %}
+<div class="alert alert-{{ms.tags}} m-3">{{ms}}</div>
+{% endfor %}
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="col-md-10 my-5 pl-5">
+    <h3 class="text-black">Home Page</h3>
+        {% for post in post %}
+    <div class="jumbotron jumbotron-fluid jumbo-color m-5">
+        <div class="container p-3 border">
+           <h1 class="display-7 m-4">{{post.title}}</h1>
+           <p class="lead m-4">{{post.disc}}</p>
+        </div>
+    </div>    
+        {% endfor %}
+    
+</div>
+
+{% endblock %}

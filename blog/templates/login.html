@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block msg %}
+{% if messages %}
+{% for ms in messages %}
+<div class="alert alert-{{ms.tags}} m-3">{{ms}}</div>
+{% endfor %}
+{% endif %}
+{% endblock %}
+
+{% block content %}
+    <div class="col-md-6 offset-3 ">
+        <h3 class="text-black my-5 ">Login Page</h3>
+        <form action="" method="POST">
+        {% csrf_token %}
+            {{fm.as_p}}
+            <br>
+            <input type="submit" value="Submit" class="btn btn-primary border">
+        </form>
+        </div>
+    </div>
+{% endblock %}

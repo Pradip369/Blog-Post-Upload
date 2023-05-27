@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/css/font-awesome.min.css">
+
+    <title>Base</title>
+</head>
+<body>
+
+<div class="container-fluid bg-dark">
+    {% include 'navbar.html' %}
+</div>
+<div class="container">
+<div class="row">
+    <div class="col-md-12">
+        {% block msg %}
+        {% endblock %}
+    </div>
+</div>
+
+<div class="row">
+   
+        {% block side %}
+        {% endblock %}
+
+        {% block content %}
+        {% endblock %}
+  
+
+</div>
+
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/popper.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>   
+</body>
+</html>

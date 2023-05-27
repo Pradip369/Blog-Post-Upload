@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand mr-5" href="#">BlogPost</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/contact">Contact</a>
+            </li>
+
+
+            {% if request.user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/dashboard">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/user_logout">Logout</a>
+            </li>
+           
+            {% else %}
+
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/signup">Signup</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/user_login">Login</a>
+            </li>
+            {% endif %}
+
+
+        </ul>
+    </div>
+</nav>

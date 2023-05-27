@@ -1,0 +1,15 @@
+body{
+    color: whitesmoke;
+    background-color: rgb(71, 66, 66);
+}
+.jumbo-color{
+    background-color: rgb(43, 36, 36);
+    
+}
+.table1{
+    background-color: blanchedalmond;
+}
+.td_td{
+    width: 450px;
+    padding-left: 50px;
+}

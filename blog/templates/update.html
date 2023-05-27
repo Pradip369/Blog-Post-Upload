@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-2">
+        <h1 class="alert alert-success p-2 my-3 text-center">Update Post</h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{fm.as_p}}
+            <input type="submit" value="Update" class="btn btn-success">
+            <a href="/blog/dashboard" class="btn btn-danger">Cancel</a>
+        </form>
+        
+    </div>
+</div>
+{% endblock %}
